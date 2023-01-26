@@ -10,7 +10,7 @@ The project Coding4Geo aims at providing an online interactive coding platform a
 1. Tips for server administrator to deploy the nbgrader system -> [read me](instructions/nbgrader_deployment.md)
 2. Tips for exercise supervisors to prepare the coding tasks -> [read me](instructions/assignment_design.md)
 
-### Exersies for reuse
+### Exercises for reuse
 
 1. Exercises on image processing
 2. Exercises on image analysis
