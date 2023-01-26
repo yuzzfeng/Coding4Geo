@@ -18,4 +18,4 @@ The project Coding4Geo aims at providing an online interactive coding platform a
 
 ### Acknowledgement
 
-This project is supported by the DFG funded NFDI (German National Research Data Infrastructure) Consortium Earth System Sciences - NFDI4Earth.
+This project is supported by the DFG funded NFDI (German National Research Data Infrastructure) Consortium Earth System Sciences - NFDI4Earth from Oct. 2022 to Feb. 2023.
