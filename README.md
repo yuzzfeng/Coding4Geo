@@ -20,8 +20,8 @@ For student and instructor login accounts, please contact
 
 ### Exercises available for reuse
 
-1. Exercises on image processing - Image Analysis for Mapping (0000002845), TUM
-2. Exercises on image analysis - Image Analysis for Mapping (0000002845), TUM
+1. Exercises on image processing - Image Analysis for Mapping (ED110091), TUM
+2. Exercises on image analysis - Image Analysis for Mapping (ED110091), TUM
 3. Exercises on machine learning
 
 ### Acknowledgement
