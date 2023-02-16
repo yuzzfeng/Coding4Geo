@@ -7,11 +7,12 @@ The project Coding4Geo aims at providing an online interactive coding platform a
 
 ### Entrance
 
-[open this link](http://tum0.icaml.org:8763/)
+- [instructor entrance](http://tum0.icaml.org:8763/)
+- [student entrance](http://tum0.icaml.org:8770/)
 
 For student and instructor login accounts, please contact 
-- [Hao Li](mailto:hao_bgd.li@tum.de), Professorship Big Geospatial Data Management
-- [Yu Feng](mailto:y.feng@tum.de), Chair of Cartography and Visual Analytics
+- [Hao Li](mailto:hao_bgd.li@tum.de), Professorship Big Geospatial Data Management, TUM
+- [Yu Feng](mailto:y.feng@tum.de), Chair of Cartography and Visual Analytics, TUM
 
 ### Instructions
 
@@ -20,10 +21,10 @@ For student and instructor login accounts, please contact
 
 ### Exercises available for reuse
 
-1. Exercises on image processing - Image Analysis for Mapping (0000002845), TUM
-2. Exercises on image analysis - Image Analysis for Mapping (0000002845), TUM
-3. Exercises on machine learning
+1. Exercises on image processing - used for Image Analysis for Mapping (ED110091), TUM
+2. Exercises on image analysis -  used for Image Analysis for Mapping (ED110091), TUM
+3. Exercises on machine learning -  used for 
 
 ### Acknowledgement
 
-This project is supported by the DFG funded NFDI (German National Research Data Infrastructure) Consortium Earth System Sciences - NFDI4Earth from Oct. 2022 to Feb. 2023.
+This project is kindly supported by the **DFG** (German Research Foundation) funded **NFDI4Earth**  - NFDI (German National Research Data Infrastructure) Consortium Earth System Sciences, from Oct. 2022 to Feb. 2023.
