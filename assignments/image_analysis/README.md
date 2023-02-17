@@ -19,7 +19,7 @@ includes the exercises on basic segmentation operations using OpenCV and scikit-
 - Watershed Transformation
 - Mean Shift Segmentation
 - SLIC superpixels algorithm
-- Douglas Peuke Algorithm
+- Douglas Peucker Algorithm
 - Hough transformation
 
 ![Assignment_2](_pic/Assignment_4.png)
