@@ -21,9 +21,9 @@ For student and instructor login accounts, please contact
 
 ### Exercises available for reuse
 
-1. Exercises on image processing - used for Image Analysis for Mapping (ED110091), TUM
-2. Exercises on image analysis -  used for Image Analysis for Mapping (ED110091), TUM
-3. Exercises on machine learning -  used for 
+1. [Exercises on image processing](/assignments/image_processing/) - used for Image Analysis for Mapping (ED110091), TUM
+2. [Exercises on image analysis](/assignments/image_analysis/) -  used for Image Analysis for Mapping (ED110091), TUM
+3. [Exercises on machine learning](/assignments/machine_learning/) -  used for 
 
 ### Acknowledgement
 
