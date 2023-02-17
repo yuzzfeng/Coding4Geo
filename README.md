@@ -23,7 +23,7 @@ For student and instructor login accounts, please contact
 
 1. [Exercises on image processing](/assignments/image_processing/) - used for Image Analysis for Mapping (ED110091), TUM
 2. [Exercises on image analysis](/assignments/image_analysis/) -  used for Image Analysis for Mapping (ED110091), TUM
-3. [Exercises on machine learning](/assignments/machine_learning/) -  used for 
+3. [Exercises on machine learning](/assignments/machine_learning/) -  used for Principles of Spatial Data Mining and Machine Learning (LRG1500), TUM
 
 ### Acknowledgement
 
