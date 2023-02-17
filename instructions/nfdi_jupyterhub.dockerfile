@@ -1,6 +1,11 @@
 #FROM jupyter/base-notebook
 FROM jupyterhub/jupyterhub
 
+
+USER root
+RUN useradd -m -p pa.OhatThRJBA  -d /home/instructor -g root -s  /bin/bash instructor
+RUN echo instructor:coding4geo | chpasswd 
+
 USER root
 RUN apt-get update && apt-get install --yes --no-install-recommends \
     dnsutils iputils-ping nano screen \
@@ -18,13 +23,14 @@ RUN python3 -m pip install ngshare_exchange notebook
 RUN pip install --no-cache jupyterhub-simplespawner
 RUN pip install --no-cache jupyterhub-dummyauthenticator
 
-COPY nbgrader_config.py /etc/jupyter/nbgrader_config.py
+COPY work/config/nbgrader_config.py /etc/jupyter/nbgrader_config.py
 
-RUN mkdir /tmp/exchange
-RUN chmod ugo+rw /tmp/exchange
+RUN mkdir -p /home/instructor/work/exchange
+RUN chmod ugo+rw /home/instructor/work/exchange
 
-RUN useradd -m -p pa.OhatThRJBA -s  /bin/bash instructor
-RUN echo instructor:coding4geo | chpasswd 
 
-#USER jovyan
-#jupyterhub --generate-config
+
+WORKDIR /home/instructor
+
+
+
