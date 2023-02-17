@@ -10,3 +10,5 @@ includes the exercises on basic image filtering operations using OpenCV libraray
 - Image smoothing with Box Filter, Binomial Filter and Median Filter
 - Image gradient with Sobel Filter
 - Laplacian filter
+
+![Assignment_2](_pic/Assignment_2.png)
