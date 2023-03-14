@@ -3,7 +3,8 @@
 Authors: Yi Zhang, Xin Wang
 
 
-### Dependencies installed already
+## 1. Dependencies installed already
+Before solving the problem in the homework, the students should install necessary dependencies in the jupytor notebook environment. For example, `OpenCV` is a popular dependency of computer vision homework. To ensure that, a install code block can be placed in the front of the task. The following code shows how we do it in Coding4Geo:
 
 ```
 !pip install numpy
@@ -11,66 +12,50 @@ Authors: Yi Zhang, Xin Wang
 !pip install matplotlib
 !pip install scikit-image
 ```
-### Task Design
+## 2. Task Description
 
-Usually an coding assignment contains several tasks. And it is beneficial to design the "coherent" tasks (for eample achieve a complex algorithm step by step), since it is much easier for student to understand the logic between tasks.
+Usually an coding assignment contains several tasks. And it is beneficial to Description the "coherent" tasks (for eample achieve a complex algorithm step by step), since it is much easier for student to understand the logic between tasks. Here is a example of task description:
 
-Here is an plain template of individual task:
+### 2.1 Example
+In this task you will write a function to read one image and return three objects, namely the original image in BGR color scale, the gray value image, and the image in RGB color scale:
 
-### Task Template
+Steps:
+1. load a color image named "examples/image.jpg" from local working directory as BGR color-space
+2. convert color-space BGR to Gray, and save the image as "gray.jpg"
+3. convert color-space BGR to RGB
 
-Firstly, a task should have a Markdown block(cell) for task description and requirement.
-
-#### Task (Index): (Title of the task)
-(Berief description of the task)
-
-Steps: (describe the step of this task in detail)
-1. (step 1)
-2. (step 2)
-3. ...
-
-Variables: (The variable asked for checking)
-1. `(variable 1 name)` : (characterization of variable 1)
-2. `(variable 2 name)` : (characterization of variable 2)
-3. ..
+Variables:
+1. `I` : loaded BGR image
+2. `I_gray` : grayscale image
+3. `I_RGB` : RGB image
 
 Hints:
-1. Function [(function 1 name)]() to (desciption of function 1)
-2. Function [(function 1 name)]() to (desciption of function 2)
-3. ..
+1. Function [cv.imread] to load image
+2. Function [cv.cvtColor] to covert color by using different flags
+3. Function [cv.imwrite] to save image
 
-Then it is followed by two python code block(cell). One is the solution block and the other one is test block.
+Notice that there is usually four parts, text description, steps, variables and hints.
 
-Solution block: 
+### 2.2 text description
+This part tell the student the content and purpose of the task.  
 
+### 2.3 steps
+In this part student can learn how to solve the task step by step. And it is also easier to evaluate the students solution if they are told how to do in detail.
+
+### 2.4 variables
+This part tells the students explicitly which variables should be defined and their functions.
+
+### 2.5 hints
+This part can let student know which API can they use.
+
+## 3. Task Solution
+After the description is the solution block. Of course the sample solution should be designed at first in order to design proper test code. Notice that the sample solution should be written between comments in the blocks like:
 ```
 ### BEGIN SOLUTION
     
 ### END SOLUTION
 ```
-
-Test block:
-```
-### BEGIN HIDDEN TESTS
-
-### END HIDDEN TESTS
-```
-
-And here is a live example of individual task:
-
-#### Task Live Example
-### Task 1: Load and Show Image, change Colorspaces
-In this task you will learn how to load an image from disk.
-
-Steps:
-1. load a color image named "examples/image.jpg" from local working directory 
-
-Variables:
-1. `I` : loaded BGR image
-
-Hints:
-1. Function [cv.imread](https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_gui/py_image_display/py_image_display.html) to load image
-
+Then the nbgrader can remove it when releasing the assignment. Here is an example of solution block:
 ```
 ### BEGIN SOLUTION
 
@@ -82,38 +67,86 @@ plt.imshow(I)
 plt.title('src img')
 plt.show()
 ```
+## 4. Test code
+The last part of a task is the test code. The test code includes `public test` and `private test`. The `private test` is the test code that you don't want to show the students (could be solution related) and should be written between comments in the blocks like:
 ```
+### BEGIN HIDDEN TESTS
+
+## END HIDDEN TESTS
+```
+Then the nbgrader can remove it when releasing the assignment. One sufficient way to design test code is define functions. For example, `public_test()` for public test and `private_test()` for private test. Here is an example of test block:
+
+```
+def public_test():
+     try:
+          I
+     except NameError:
+          print("[Error] Variable I is not defined.")
+          return False
+     return True
+
+assert public_test()
+
 ### BEGIN HIDDEN TESTS
 I_test = cv.imread("example/image.jpg",cv.IMREAD_COLOR)
 
-try: 
-   assert (I == I_test).all()
-except: 
-   print("[Error] Loaded image is not correct.")
+def private_test():
+     try: 
+          assert (I == I_test).all()
+     except: 
+          print("[Error] Loaded image is not correct.")
+          return False
+     return True
+     
+assert private_test()
 ## END HIDDEN TESTS
 ```
 
-#### Test Code
+Every single point that is checked in the test function is bounded by a `try-except` block. Here are some typical test block that you may use:
 
-One sufficient way to make test code is use `assert`
-keyword and Exception Handling including `try` and  `except`. In the previous example,
-
+### 4.1 variable existence check
+Remember that in the task description we have required that which variables should be defined. This block is to ensure that the variable exits. Student can not pass the task without definine asked variables.
 ```
-### BEGIN HIDDEN TESTS
-I_test = cv.imread("example/image.jpg",cv.IMREAD_COLOR)
+try:
+     var
+except NameError:
+     print("[Error] Variable var is not defined.")
+     return False
+```
 
+### 4.2 channel check
+This block checks wether the matrix `img` is grayscale or not. If you want to check color channel, the number should be 3.
+```
+try:
+     assert len(img.shape) == 2
+except:
+     print("[Error] The channel of img is wrong.")
+     return False
+```
+
+### 4.3 shape check
+This block checks the shape of matrix `img`.
+```
+try:
+     assert img.shape == (240,360)
+except:
+     print("[Error] The shape of img is wrong.")
+     return False
+```
+### 4.4 value check
+You can check the pixel value of img like:
+```
+ try:
+     assert (img[120,300] == [222, 152, 127]).all()
+except:
+     print(f"[Error] The value of pixel (120,300) isn't correct. Expected: [222, 152, 127], but got {img[120,300]}")
+     return False
+```
+or the value of whole matrix like:
+```
 try: 
-   assert (I == I_test).all()
+     assert (img==result).all()
 except: 
-   print("[Error] Loaded image is not correct.")
-## END HIDDEN TESTS
+     print("[Error] The result seems to be different. Try again with correct parameters.") 
+     return False
 ```
-
-At first we should create correct answer in order to make comparison. In this part you can just implement the solution code using different variables. (like what we do in the example) Or you can use constant value or load value from self defined data files.
-
-Then we use assert to test if the condition is true. In this example, the condition is `I == I_test`. Notice that for comparsion between ndarrays, `.all()` can be helpful.
-
-Finally, we use `try` and `except` block to handle the wrong solution. If the condition returns false, it will run the code in `except` block, where you can implement some hint code to tell students about the mistakes.
-
-#### Note
-Notice that if we only implement assert without Exception Handling, the python Interpreter will automatically call `traceback.print_exc()` and students can see the details of your test code.
