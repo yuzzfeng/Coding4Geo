@@ -9,7 +9,7 @@ includes the exercises on basic operations using OpenCV libraray.
 - Image thresholding
 - Example of simple road extraction
 
-![Assignment_2](_pic/Assignment_3.png)
+![Assignment_3](_pic/Assignment_3.png)
 
 
 ### Assignment 4 - Extraction of regions and edges
@@ -22,4 +22,13 @@ includes the exercises on basic segmentation operations using OpenCV and scikit-
 - Douglas Peucker Algorithm
 - Hough transformation
 
-![Assignment_2](_pic/Assignment_4.png)
+![Assignment_4](_pic/Assignment_4.png)
+
+### Assignment 6 - Harris Corner Detection
+
+includes the exercises on building the Harris Corner detector.
+- Sobel Operator
+- Structure Matrix
+- Corner response function
+
+![Assignment_6](_pic/Assignment_6.png)
