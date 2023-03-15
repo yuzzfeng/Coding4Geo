@@ -1,14 +1,14 @@
 # Coding4Geo
 
-An open-access and interactive coding platform to facilitate E-Teaching in Geospatial Data Analysis (Coding4Geo)
+An open-access and interactive coding platform to facilitate E-Teaching in Geospatial Data Analysis ([Coding4Geo](https://sites.google.com/view/coding4geo/))
 <p><a href="https://sites.google.com/view/coding4geo/"><img src="doc/logos/Coding4geo_Logo_black.png" style="width:100px;"></a></p>
 
 The project Coding4Geo aims at providing an online interactive coding platform allowing automatically checking of student submissions and initially serve the students from geoinformatics related courses at the Technical University of Munich (TUM). The longer-term scope aims at a platform, which provides the opportunity to be extended and deployed for many other ESS-related disciplines.
 
 ### Entrance
 
-- [instructor entrance](http://tum0.icaml.org:8763/)
-- [student entrance](http://tum0.icaml.org:8770/)
+- [Instructor entrance](http://tum0.icaml.org:8763/)
+- [Student entrance](http://tum0.icaml.org:8770/)
 
 For student and instructor login accounts, please contact 
 - [Hao Li](mailto:hao_bgd.li@tum.de), Professorship Big Geospatial Data Management, TUM
@@ -17,7 +17,7 @@ For student and instructor login accounts, please contact
 ### Instructions
 
 1. Tips for server administrator to deploy the nbgrader system -> [read me](instructions/nbgrader_deployment.md)
-2. Tips for exercise supervisors to prepare the coding tasks -> [read me](instructions/assignment_design.md)
+2. Tips for exercise supervisors to prepare the coding tasks -> [read me](instructions/assignment_design.md) -> [video](https://youtu.be/L5cpBl6HHdQ)
 
 ### Exercises available for reuse
 
