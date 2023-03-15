@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7738274.svg)](https://doi.org/10.5281/zenodo.7738274)
+
 # Coding4Geo
 
 An open-access and interactive coding platform to facilitate E-Teaching in Geospatial Data Analysis ([Coding4Geo](https://sites.google.com/view/coding4geo/))
